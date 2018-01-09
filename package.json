@@ -1,0 +1,29 @@
+{
+  "name": "molda",
+  "version": "0.0.1",
+  "description": "A powerful responsive Scss framework.",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "test": "gulp test",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takamoso/molda.git"
+  },
+  "keywords": [],
+  "author": "takamoso",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/takamoso/molda/issues"
+  },
+  "homepage": "https://github.com/takamoso/molda#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
