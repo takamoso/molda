@@ -4,7 +4,10 @@ const scss = require('gulp-sass');
 gulp.task('css', () => {
   gulp
     .src('test/test.scss')
-    .pipe(scss({outputStyle: 'compressed'}).on('error', scss.logError))
+    .pipe(scss({
+      outputStyle: 'compressed',
+      functions: require('./src/_custom')
+    }).on('error', scss.logError))
     .pipe(gulp.dest('./test'));
 });
 
