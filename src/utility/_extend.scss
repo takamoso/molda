@@ -1,0 +1,13 @@
+@function _extend($map...) {
+  @each $key, $value in nth($map, 2) {
+    $target: nth($map, 1);
+    
+    @if (not map-has-key($target, $key)) or (type-of(map-get($target, $key)) != type-of($value)) or (not (type-of(map-get($target, $key)) == map and type-of($value) == map)) {
+      $map: set-nth($map, 1, map-merge($target, ($key: $value)));
+    } @else {
+      $map: map-merge($target, ($key: map-merge(map-get($target, $key), $value)));
+    }
+  }
+
+  @return nth($map, 1);
+}
